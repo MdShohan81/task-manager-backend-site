@@ -35,8 +35,7 @@ const limiter= rateLimit({windowMs:15*60*1000,max:3000})
 app.use(limiter)
 
 // Mongo DB Database Connection
-const uri = "mongodb+srv://<username>:<password>@cluster0.3vrton3.mongodb.net/todo?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const URI = "mongodb+srv://<username>:<password>@cluster0.3vrton3.mongodb.net/todo?retryWrites=true&w=majority";
 let OPTION={user:'taskmanager7777',pass:'taskmanager7777',autoIndex:true}
 mongoose.connect(URI,OPTION,(error)=>{
     console.log("Connection Success")
